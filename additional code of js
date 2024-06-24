@@ -1,0 +1,39 @@
+// Function to find the GCD (Greatest Common Divisor) of two numbers
+function gcd(a, b) {
+    while (b !== 0) {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+// Function to determine and store the higher number among number1 and number2 in 'min'
+function storeHigherNumberInMin(number1, number2) {
+    let min;
+    
+    if (number1 > number2) {
+        min = number1;
+    } else {
+        min = number2;
+    }
+
+    console.log("The higher number is stored in min:", min);
+}
+
+// Function to determine and store the higher number among number1 and number2 in 'min' using a while loop
+function storeHigherNumberInMinWithWhile(number1, number2) {
+    let min;
+
+    // While loop to ensure comparison happens at least once
+    while (true) {
+        if (number1 > number2) {
+            min = number1;
+        } else {
+            min = number2;
+        }
+        break; // Exit the loop after one comparison
+    }
+
+    console.log("The higher number is stored in min:", min);
+}
